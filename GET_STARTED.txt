@@ -1,0 +1,65 @@
+The 'config_files' directory has configuration file(s) which contain(s) hyperparameters and other inputs required for training. 
+
+The 'data' directory contains training data. 
+
+The 'models' directory has architectures of models developed for training. After developing models, list them in 'models.py' file in that directory.
+
+The 'result_data' directory contains the directories inside for each training run. The results of various training processes are stored or saved in different formats.
+
+To generate data, run 'generate_data.py' file. The filename is printed in the console. Add that file name in 'train_data_file_path' in configuration file. 
+
+To start training, run 'main.py' file.
+
+But before carrying out training, the dependencies to run pytorch needs to be installed.
+So virtual environment dedicated to that would be a good way. 
+
+####################################
+Creating virtual envionment in Linux.
+-------------------------------------
+1.If pip is not in your system
+$ sudo apt-get install python-pip
+
+2.Then install virtualenv
+$ pip install virtualenv
+
+3.Now check your installation
+$ virtualenv --version
+
+4.Create a virtual environment now,
+$ virtualenv virtualenv_name
+
+5.After this command, a folder named virtualenv_name will be created. You can name anything to it. If you want to create a virtualenv for specific python version, type
+$ virtualenv -p /usr/bin/python3 virtualenv_name
+
+or
+
+$ virtualenv -p /usr/bin/python2.7 virtualenv_name
+
+6.Now at last we just need to activate it, using command
+$ source virtualenv_name/bin/activate
+
+
+7.Now you are in a Python virtual environment. To install the requirements in the current environment
+pip install -r requirements.txt
+####################################
+
+
+####################################
+Creating Python virtualenv in Windows
+-------------------------------------
+If python is installed in your system, then pip comes in handy.
+So simple steps are:
+1) Install virtualenv using
+ > pip install virtualenv 
+ 
+2)Now in which ever directory you are, this line below will create a virtualenv there
+> virtualenv myenv
+
+And here also you can name it anything.
+
+3) Now if you are same directory then type,
+> myenv\Scripts\activate
+
+You can explicitly specify your path too.
+
+##########################
